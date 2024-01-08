@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LST HUB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Your CSS styles */
+        /* ... */
+        .login-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .login-popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .profile {
+            display: none;
+            margin-top: 20px;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="login">Login</a>
+    </div>
+    <div class="container">
+        <h1>LST HUB</h1>
+        <h3>learn smart tutors</h3>
+        <p>Let's journey toward academic success together!</p>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/eHxCYmQeZKA?autoplay=1&mute=1" title="Animated Teacher Character Templates (Free&amp;Editable) | Online Teaching Videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="#" class="login">Login</a>
+        <div class="profile" id="profileSection">
+            <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+        </div>
+        <h6>Arjan Miguel A. Brua</h6>
+    </div>
+
+    <div class="login-popup" id="loginPopup">
+        <div class="login-popup-content">
+            <h2>Login</h2>
+            <form onsubmit="submitLoginForm(event)">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+            <button onclick="closeLoginPopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Your JavaScript for login functionality
+        document.querySelector('.login').addEventListener('click', function() {
+            document.getElementById('loginPopup').style.display = 'flex';
+        });
+
+        function closeLoginPopup() {
+            document.getElementById('loginPopup').style.display = 'none';
+        }
+
+        function submitLoginForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the entered username
+            const username = document.getElementById('username').value;
+
+            // Display the username as a profile
+            document.getElementById('usernameDisplay').textContent = username;
+            document.getElementById('profileSection').style.display = 'block';
+            document.getElementById('loginPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

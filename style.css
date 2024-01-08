@@ -1,0 +1,47 @@
+/* Your CSS styles */
+body {
+    background-image: url(bg.png);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    font-size: 3em;
+    color: rgb(68, 68, 189);
+}
+h3 {
+    font-size: 1.5em;
+    color: rgb(68, 68, 189);
+}
+p {
+    font-size: 1.2em;
+    color: rgb(68, 68, 189);
+}
+.login {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(68, 68, 189);
+    text-decoration: none;
+    border-radius: 5px;
+}
+h6 {
+    font-size: 1.2em;
+    color: rgb(68, 68, 189);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+iframe {
+    margin: 20px auto;
+    display: block;
+}
